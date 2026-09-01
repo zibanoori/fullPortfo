@@ -1,11 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziba Noori</title>
-</head>
-<body>
-    <h1>My New project</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fullstackPortfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="logo">
+        <a href="#home">Ziba Noori</a>
+      </h1>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a
+          href="https://github.com/zibanoori"
+          target="_blank"
+          aria-label="GitHub Profile"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/ziba-nouri/"
+          target="_blank"
+          aria-label="Linkedin Profile"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <figure class="hero-image">
+            <img src="assets/images/z-n.webp" alt="z-n" />
+          </figure>
+
+          <div class="hero-content">
+            <h2 class="profile-name">Ziba Noori</h2>
+            <h3 class="job-title">Developer</h3>
+            <p class="profile-text">
+              "Hello, I'm Ziba. For the last two years, I’ve been deeply
+              involved in Full-Stack development, mastering Python backend and
+              frontend essentials. I truly love what I do and am committed to
+              creating quality web solutions."
+            </p>
+
+            <a href="#projects" class="btn-primary">View My Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content">
+            <p class="section-label">About Me</p>
+
+            <h2 class="section-title">A little bit about me</h2>
+
+            <p class="about-text">
+              Full-stack developer with frontend expertise and growing backend
+              skills.
+            </p>
+          </div>
+          <div class="about-info">
+            <h3>My Journey</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Frontend Development</li>
+              <li>Python Programming</li>
+              <li>Django Backend Development</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+        <div class="container">
+          <div class="skills-content">
+            <p class="section-label">My Skills</p>
+
+            <h2 class="section-title">I Work With</h2>
+            <p class="skills-description">
+              Building skills in frontend, Python, and Django.
+            </p>
+          </div>
+
+          <div class="skills-list">
+            <div class="skill-item">
+              <i class="fa-brands fa-git-alt"></i>
+              <span>Git & GitHub</span>
+            </div>
+
+            <div class="skill-item">
+              <i class="fa-brands fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="skill-item">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML</span>
+            </div>
+
+            <div class="skill-item">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+
+            <div class="skill-item">
+              <i class="fa-brands fa-python"></i>
+              <span>Python</span>
+            </div>
+
+            <div class="skill-item">
+              <i class="fa-solid fa-server"></i>
+              <span>Django</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <div class="projects-header">
+            <h2 class="section-title">My Projects</h2>
+          </div>
+
+          <div class="projects-list">
+            <article class="project-card active">
+              <img src="assets/images/carousel.webp" alt="pj" />
+              <div class="card-content">
+                <h3>Vanilla JS Carousel</h3>
+                <div class="badges">
+                  <span class="badge html">HTML</span>
+                  <span class="badge css">CSS</span>
+                  <span class="badge js">JS</span>
+                </div>
+                <a
+                  href="https://zibanoori.github.io/carouselJS/"
+                  class="project-link"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="assets/images/dashboard.webp" alt="pj" />
+              <div class="card-content">
+                <h3>nexus</h3>
+                <div class="badges">
+                  <span class="badge html">HTML</span>
+                  <span class="badge css">CSS</span>
+                  <span class="badge js">JS</span>
+                </div>
+                <a
+                  href="https://zibanoori.github.io/nexus/"
+                  class="project-link"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="assets/images/login-form (2).webp" alt="pj" />
+              <div class="card-content">
+                <h3>serenesignin</h3>
+                <div class="badges">
+                  <span class="badge html">HTML</span>
+                  <span class="badge css">CSS</span>
+                  <span class="badge css">JS</span>
+                </div>
+                <a
+                  href="https://zibanoori.github.io/serenesignin/"
+                  class="project-link"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="assets/images/portfolio-zn.webp" alt="pj" />
+              <div class="card-content">
+                <h3>Portfolio Website</h3>
+                <div class="badges">
+                  <span class="badge html">HTML</span>
+                  <span class="badge css">CSS</span>
+                  <span class="badge js">JS</span>
+                  <span class="badge python">Python</span>
+                  <span class="badge django">Django</span>
+                </div>
+                <a
+                  href="https://zibanoori.github.io/fullstackPortfolio/"
+                  class="project-link"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="assets/images/port.sm.webp" alt="pj" />
+              <div class="card-content">
+                <h3>Portfolio Sample</h3>
+                <div class="badges">
+                  <span class="badge html">HTML</span>
+                  <span class="badge css">CSS</span>
+                </div>
+                <a
+                  href="https://zibanoori.github.io/portfolio/"
+                  class="project-link"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-start">
+              <p class="section-label">Contact Me</p>
+              <h2 class="section-title">Let's Work Together</h2>
+              <p class="contact-description">
+                Have a project in mind or want to get in touch? Feel free to
+                send me a message.
+              </p>
+            </div>
+
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Write your message..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer Section -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2 class="footer-logo">Ziba Noori</h2>
+          <p class="footer-description">Frontend | Python | Django</p>
+        </div>
+        <nav class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            noorizibaa@gmail.com
+          </p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Tehran, Iran
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ziba Noori. All rights reserved.</p>
+        <p class="made-with">
+          Made with <i class="fa-solid fa-heart" style="color: red"></i> by Ziba
+        </p>
+      </div>
+    </footer>
+    <script src="assets/scripts/main.js"></script>
+  </body>
 </html>
