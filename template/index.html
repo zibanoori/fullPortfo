@@ -1,10 +1,9 @@
-{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fullstackPortfolio</title>
+    <title>portfo</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -15,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{% static "assets/css/style.css" %}" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <header class="site-header">
@@ -53,17 +53,17 @@
       <section id="home" class="hero">
         <div class="container">
           <figure class="hero-image">
-            <img src="assets/images/z-n.webp" alt="z-n" />
+            <img src="assets/images/z-n-2.webp" alt="z-n" />
           </figure>
 
           <div class="hero-content">
             <h2 class="profile-name">Ziba Noori</h2>
             <h3 class="job-title">Developer</h3>
             <p class="profile-text">
-              "Hello, I'm Ziba. For the last two years, I’ve been deeply
-              involved in Full-Stack development, mastering Python backend and
-              frontend essentials. I truly love what I do and am committed to
-              creating quality web solutions."
+              Hello, I'm Ziba. For the last two years, I’ve been deeply involved
+              in Full-Stack development, mastering Python backend and frontend
+              essentials. I truly love what I do and am committed to creating
+              quality web solutions.
             </p>
 
             <a href="#projects" class="btn-primary">View My Projects</a>
@@ -163,6 +163,12 @@
                   target="_blank"
                   >View Project</a
                 >
+                <a
+                  href="https://github.com/zibanoori/carouselJS"
+                  class="project-link"
+                  target="_blank"
+                  >View Code</a
+                >
               </div>
             </article>
 
@@ -180,6 +186,12 @@
                   class="project-link"
                   target="_blank"
                   >View Project</a
+                >
+                <a
+                  href="https://github.com/zibanoori/dropflow"
+                  class="project-link"
+                  target="_blank"
+                  >View Code</a
                 >
               </div>
             </article>
@@ -199,11 +211,17 @@
                   target="_blank"
                   >View Project</a
                 >
+                <a
+                  href="https://github.com/zibanoori/serenesignin"
+                  class="project-link"
+                  target="_blank"
+                  >View Code</a
+                >
               </div>
             </article>
 
             <article class="project-card">
-              <img src="assets/images/portfolio-zn.webp" alt="pj" />
+              <img src="assets/images/portfo.webp" alt="pj" />
               <div class="card-content">
                 <h3>Portfolio Website</h3>
                 <div class="badges">
@@ -214,10 +232,16 @@
                   <span class="badge django">Django</span>
                 </div>
                 <a
-                  href="https://zibanoori.github.io/fullstackPortfolio/"
+                  href="https://zibanoori.github.io/portfo/"
                   class="project-link"
                   target="_blank"
                   >View Project</a
+                >
+                <a
+                  href="https://github.com/zibanoori/portfo"
+                  class="project-link"
+                  target="_blank"
+                  >View Code</a
                 >
               </div>
             </article>
@@ -234,7 +258,13 @@
                   href="https://zibanoori.github.io/portfolio/"
                   class="project-link"
                   target="_blank"
-                  >View Project</a
+                  >Live Preview</a
+                >
+                <a
+                  href="https://github.com/zibanoori/portfolio"
+                  class="project-link"
+                  target="_blank"
+                  >View Code</a
                 >
               </div>
             </article>
@@ -242,7 +272,6 @@
         </div>
       </section>
       <!-- Contact Section -->
-
       <section id="contact" class="contact">
         <div class="container">
           <div class="contact-content">
