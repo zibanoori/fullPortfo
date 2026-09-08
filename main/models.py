@@ -9,3 +9,6 @@ class main(models.Model):
     made_with = models.CharField(max_length=200, blank=True)
     email = models.EmailField(blank=True)
     address =models.CharField(max_length=100, blank=True)
+    
+    def __str__(self):
+        return "Main Details"
