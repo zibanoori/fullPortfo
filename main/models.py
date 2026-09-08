@@ -1,6 +1,8 @@
 from django.db import models
 
 class Main(models.Model):
+    class Meta:
+        verbose_name_plural = "Main Details"
     
     logo = models.CharField(max_length=50, blank=True)
     github_url = models.URLField(max_length=250, blank=True)
