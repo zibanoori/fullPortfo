@@ -3,7 +3,10 @@ from django.db import models
 class Main(models.Model):
     class Meta:
         verbose_name_plural = "Main Details"
-    
+        
+        
+    title = models.CharField(max_length=50, blank=True, help_text="This is a text. Not an image.")
+    description = models.TextField(blank=True)
     logo = models.CharField(max_length=50, blank=True, help_text="This is a text. Not an image.")
     github_url = models.URLField(max_length=250, blank=True)
     linkedin_url = models.URLField(max_length=250, blank=True)
