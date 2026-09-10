@@ -5,7 +5,7 @@ class Main(models.Model):
         verbose_name_plural = "Main Details"
         
         
-    title = models.CharField(max_length=50, blank=True, help_text="This is a text. Not an image.")
+    title = models.CharField(max_length=75, blank=True, help_text="This is a text. Not an image.")
     description = models.TextField(blank=True)
     logo = models.CharField(max_length=50, blank=True, help_text="This is a text. Not an image.")
     github_url = models.URLField(max_length=250, blank=True)
@@ -13,7 +13,7 @@ class Main(models.Model):
     copyright = models.CharField(max_length=200, blank=True)
     made_with = models.CharField(max_length=200, blank=True)
     email = models.EmailField(blank=True)
-    address =models.CharField(max_length=100, blank=True)
-    
+    address = models.CharField(max_length=100, blank=True)
+    footer_description = models.TextField(blank=True)
     def __str__(self):
         return "Main Details"
