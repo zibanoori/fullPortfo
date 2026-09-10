@@ -21,7 +21,7 @@
   <body>
     <header class="site-header">
       <h1 class="logo">
-        <a href="#home">{{ details.logo }}</a>
+        <a href="#home">{{ details.title }}</a>
       </h1>
       <nav class="navbar">
         <ul class="nav-list">
@@ -279,10 +279,7 @@
             <div class="contact-start">
               <p class="section-label">Contact Me</p>
               <h2 class="section-title">Let's Work Together</h2>
-              <p class="contact-description">
-                Have a project in mind or want to get in touch? Feel free to
-                send me a message.
-              </p>
+              <p class="contact-description">{{ details.description }}</p>
             </div>
 
             <form class="contact-form">
@@ -298,7 +295,7 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email"></label>
                 <input
                   type="email"
                   id="email"
@@ -330,8 +327,8 @@
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <h2 class="footer-logo">Ziba Noori</h2>
-          <p class="footer-description">Frontend | Python | Django</p>
+          <h2 class="footer-logo">{{ details.title }}</h2>
+          <p class="footer-description">{{ details.footer_description }}</p>
         </div>
         <nav class="footer-links">
           <h4>Quick Links</h4>
