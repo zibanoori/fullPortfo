@@ -4,7 +4,7 @@ class Main(models.Model):
     class Meta:
         verbose_name_plural = "Main Details"
         
-        
+    favicon = models.ImageField(upload_to='main/', blank=True, null=True) 
     title = models.CharField(max_length=75, blank=True, help_text="This is a text. Not an image.")
     description = models.TextField(blank=True)
     logo = models.CharField(max_length=50, blank=True, help_text="This is a text. Not an image.")
