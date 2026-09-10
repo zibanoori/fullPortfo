@@ -24,5 +24,6 @@ class Project(models.Model):
     title = models.CharField("عنوان",max_length=150, blank=True)
     featured_image = models.ImageField(upload_to="projects/")
     description = models.TextField(blank=True)
+    view_projects_link = models.URLField(blank=True)
     
     
