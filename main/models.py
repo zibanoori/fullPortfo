@@ -17,3 +17,12 @@ class Main(models.Model):
     footer_description = models.TextField(blank=True)
     def __str__(self):
         return "Main Details"
+    
+    
+class Project(models.Model):
+    
+    title = models.CharField("عنوان",max_length=150, blank=True)
+    featured_image = models.ImageField(upload_to="projects/")
+    
+    
+    
