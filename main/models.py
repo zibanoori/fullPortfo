@@ -26,4 +26,5 @@ class Project(models.Model):
     description = models.TextField(blank=True)
     view_projects_link = models.URLField(blank=True)
     view_code_link = models.URLField(blank=True)
+    tags = models.CharField(max_length=100, blank=True)
     
