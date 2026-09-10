@@ -25,5 +25,5 @@ class Project(models.Model):
     featured_image = models.ImageField(upload_to="projects/")
     description = models.TextField(blank=True)
     view_projects_link = models.URLField(blank=True)
-    
+    view_code_link = models.URLField(blank=True)
     
