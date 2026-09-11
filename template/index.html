@@ -142,128 +142,28 @@
           <div class="projects-header">
             <h2 class="section-title">My Projects</h2>
           </div>
-
           <div class="projects-list">
-            <article class="project-card active">
-              <img src="{% static "assets/images/carousel.webp" %}" alt="pj" />
-              <div class="card-content">
-                <h3>Vanilla JS Carousel</h3>
-                <div class="badges">
-                  <span class="badge html">HTML</span>
-                  <span class="badge css">CSS</span>
-                  <span class="badge js">JS</span>
-                </div>
-                <a
-                  href="https://zibanoori.github.io/carouselJS/"
-                  class="project-link"
-                  target="_blank"
-                  >View Project</a
-                >
-                <a
-                  href="https://github.com/zibanoori/carouselJS"
-                  class="project-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="{% static "assets/images/dashboard.webp" %}" alt="pj" />
-              <div class="card-content">
-                <h3>nexus</h3>
-                <div class="badges">
-                  <span class="badge html">HTML</span>
-                  <span class="badge css">CSS</span>
-                  <span class="badge js">JS</span>
-                </div>
-                <a
-                  href="https://zibanoori.github.io/nexus/"
-                  class="project-link"
-                  target="_blank"
-                  >View Project</a
-                >
-                <a
-                  href="https://github.com/zibanoori/dropflow"
-                  class="project-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="{% static "assets/images/login-form.webp" %}" alt="pj" />
-              <div class="card-content">
-                <h3>serenesignin</h3>
-                <div class="badges">
-                  <span class="badge html">HTML</span>
-                  <span class="badge css">CSS</span>
-                  <span class="badge css">JS</span>
-                </div>
-                <a
-                  href="https://zibanoori.github.io/serenesignin/"
-                  class="project-link"
-                  target="_blank"
-                  >View Project</a
-                >
-                <a
-                  href="https://github.com/zibanoori/serenesignin"
-                  class="project-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="{% static "assets/images/portfo.webp" %}" alt="pj" />
-              <div class="card-content">
-                <h3>Portfolio Website</h3>
-                <div class="badges">
-                  <span class="badge html">HTML</span>
-                  <span class="badge css">CSS</span>
-                  <span class="badge js">JS</span>
-                  <span class="badge python">Python</span>
-                  <span class="badge django">Django</span>
-                </div>
-                <a
-                  href="https://zibanoori.github.io/portfo/"
-                  class="project-link"
-                  target="_blank"
-                  >View Project</a
-                >
-                <a
-                  href="https://github.com/zibanoori/portfo"
-                  class="project-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card">
-              <img src="{% static "assets/images/portsm.webp" %}" alt="pj" />
-              <div class="card-content">
-                <h3>Portfolio Sample</h3>
-                <div class="badges">
-                  <span class="badge html">HTML</span>
-                  <span class="badge css">CSS</span>
-                </div>
-                <a
-                  href="https://zibanoori.github.io/portfolio/"
-                  class="project-link"
-                  target="_blank"
-                  >Live Preview</a
-                >
-                <a
-                  href="https://github.com/zibanoori/portfolio"
-                  class="project-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-            </article>
+          {% for proj in projects %}
+           <article class="project-card active">
+            {% if proj.featured_image %}
+             <img src="{{ proj.featured_image.url }}" alt="{{ proj.title }}" />
+            {% endif %}
+            <div class="card-content">
+          <h3>{{ proj.title }}</h3>
+         <div class="badges">
+           {% for tag in proj.tag_list %}
+            <span class="badge">{{ tag }}</span>
+           {% endfor %}
+        </div>
+         {% if proj.view_projects_link %}
+        <a href="{{ proj.view_projects_link }}" class="project-link" target="_blank">View Project</a>
+         {% endif %}
+        <!-- {% if proj.view_code_link %}
+        <a href="{{ proj.view_code_link }}" class="project-link" target="_blank">View Code</a>
+        {% endif %} -->
+    </div>
+  </article>
+{% endfor %}
           </div>
         </div>
       </section>
