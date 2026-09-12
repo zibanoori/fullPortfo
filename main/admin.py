@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Main, Project
+from .models import Main, Project, skill
 
 @admin.register(Main)
 class MainAdmin(admin.ModelAdmin):
@@ -13,3 +13,8 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ['title', 'tags', 'featured_image']
     search_fields = ['title', 'description']
     list_filter = ['tags'] 
+    
+@admin.register(Skill)
+class SkillAdmin(admin.ModelAdmin):
+    list_display = ["name","icons"]
+    search_fields = ["name"]    
