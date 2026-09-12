@@ -143,27 +143,31 @@
             <h2 class="section-title">My Projects</h2>
           </div>
           <div class="projects-list">
-          {% for proj in projects %}
-           <article class="project-card active">
-            {% if proj.featured_image %}
-             <img src="{{ proj.featured_image.url }}" alt="{{ proj.title }}" />
-            {% endif %}
-            <div class="card-content">
-          <h3>{{ proj.title }}</h3>
-         <div class="badges">
-           {% for tag in proj.tag_list %}
-            <span class="badge">{{ tag }}</span>
-           {% endfor %}
+      {% for proj in projects %}
+    <article class="project-card {% if forloop.first %}active{% endif %}">
+    
+        {% if proj.featured_image %}
+          <img src="{{ proj.featured_image.url }}" alt="{{ proj.title }}" />
+        {% endif %}
+        <div class="card-content">
+         <h3>{{ proj.title }}</h3>
+          <div class="badges">
+        {% for tag in proj.tag_list %}
+          <span class="badge">{{ tag }}</span>
+        {% endfor %}
         </div>
-         {% if proj.view_projects_link %}
-        <a href="{{ proj.view_projects_link }}" class="project-link" target="_blank">View Project</a>
-         {% endif %}
-        <!-- {% if proj.view_code_link %}
-        <a href="{{ proj.view_code_link }}" class="project-link" target="_blank">View Code</a>
-        {% endif %} -->
+      <div class="project-links">
+        {% if proj.view_projects_link %}
+          <a href="{{ proj.view_projects_link }}" class="project-link" target="_blank">View Project</a>
+        {% endif %}
+        
+        {% if proj.view_code_link %}
+          <a href="{{ proj.view_code_link }}" class="project-link" target="_blank">View Code</a>
+        {% endif %}
+      </div>
     </div>
   </article>
-{% endfor %}
+      {% endfor %}
           </div>
         </div>
       </section>
