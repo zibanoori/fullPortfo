@@ -42,6 +42,7 @@ class Skill(models.Model):
         
     name = models.CharField(max_length=150, blank=True)
     icons = models.CharField(max_length=100, blank=True)
-    
+    skills_title = models.CharField(max_length=100, blank=True, default="I Work With")
+    skills_description = models.TextField(blank=True, default="Building skills in frontend, python and Django")
     def __str__(self):
         return self.name
