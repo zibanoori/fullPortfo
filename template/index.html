@@ -96,44 +96,20 @@
         <div class="container">
           <div class="skills-content">
             <p class="section-label">My Skills</p>
-
-            <h2 class="section-title">I Work With</h2>
-            <p class="skills-description">
-              Building skills in frontend, Python, and Django.
-            </p>
+            <h2 class="section-title">{{ details.skills_title }}</h2>
+            <p class="skills-description">{{ details.skills_description }}</p>
           </div>
 
-          <div class="skills-list">
-            <div class="skill-item">
-              <i class="fa-brands fa-git-alt"></i>
-              <span>Git & GitHub</span>
-            </div>
-
-            <div class="skill-item">
-              <i class="fa-brands fa-js"></i>
-              <span>JavaScript</span>
-            </div>
-
-            <div class="skill-item">
-              <i class="fa-brands fa-html5"></i>
-              <span>HTML</span>
-            </div>
-
-            <div class="skill-item">
-              <i class="fa-brands fa-css3-alt"></i>
-              <span>CSS</span>
-            </div>
-
-            <div class="skill-item">
-              <i class="fa-brands fa-python"></i>
-              <span>Python</span>
-            </div>
-
-            <div class="skill-item">
-              <i class="fa-solid fa-server"></i>
-              <span>Django</span>
-            </div>
-          </div>
+        <div class="skills-list">
+         {% for skill in skills %}
+           <div class="skill-item">
+             {% if skill.icons %}
+               <i class="{{ skill.icons }}"></i>
+             {% endif %}
+             <span>{{ skill.name }}</span>
+           </div>
+         {% endfor %} 
+        </div>
         </div>
       </section>
       <!-- Projects Section -->
