@@ -33,3 +33,15 @@ class Project(models.Model):
         
     def __str__(self):
         return self.title
+    
+    
+class Skill(models.Model):
+    class Meta:
+        verbose_name="Skill"
+        verbose_name_plural = "Skills"
+        
+    name = models.CharField(max_length=150, blank=True)
+    icons = models.CharField(max_length=100, blank=True)
+    
+    def __str__(self):
+        return self.name
