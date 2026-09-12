@@ -15,12 +15,20 @@ class Main(models.Model):
     email = models.EmailField(blank=True)
     address = models.CharField(max_length=100, blank=True)
     footer_description = models.TextField(blank=True)
+    
+    about_label = models.CharField(max_length=100, blank=True, default="About Me")
+    about_title = models.CharField(max_length=150, blank=True, default="A little bit about me")
+    about_text = models.TextField(blank=True, default="Full-stack developer with frontend expertise and growing backend skills.")
+    journey_title = models.CharField(max_length=100, blank=True, default="My Journey")
+    
+    skills_title = models.CharField(max_length=100, blank=True, default="I Work With")
+    skills_description = models.TextField(blank=True, default="Building skills in frontend, Python, and Django.")
+
     def __str__(self):
         return "Main Details"
     
     
 class Project(models.Model):
-    
     title = models.CharField(max_length=150, blank=True, verbose_name="Project Title")
     featured_image = models.ImageField(upload_to="projects/")
     description = models.TextField(blank=True)
@@ -37,12 +45,11 @@ class Project(models.Model):
     
 class Skill(models.Model):
     class Meta:
-        verbose_name="Skill"
+        verbose_name = "Skill"
         verbose_name_plural = "Skills"
         
     name = models.CharField(max_length=150, blank=True)
     icons = models.CharField(max_length=100, blank=True)
-    skills_title = models.CharField(max_length=100, blank=True, default="I Work With")
-    skills_description = models.TextField(blank=True, default="Building skills in")
+    
     def __str__(self):
         return self.name
