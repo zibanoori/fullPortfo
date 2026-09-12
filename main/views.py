@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Main, Project
+from .models import Main, Project, Skill
 
 
 def index(request):
     main_details = Main.objects.first()
     projects = Project.objects.all()
+    skills = skill.objects.all()
     
     for proj in projects:
         if proj.tags:
@@ -14,7 +15,8 @@ def index(request):
 
     context = {
         "details": main_details,
-        "projects": projects
+        "projects": projects,
+        "skills": skills
     }
     
     return render(request, "index.html", context=context)
