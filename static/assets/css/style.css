@@ -289,16 +289,18 @@ main {
   gap: 16px;
   padding: 20px;
   background-color: var(--color-white);
-  border: 1px solid rgb(214, 206, 206);
-  border-radius: 10px;
-  transition: 0.3s;
+  border: 1px solid #e8e4e4;
+  border-radius: 10px; 
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
-.skills-description {
-  font-family: var(--font-main);
-  font-size: 1rem;
-  color: var(--color-primary);
-  line-height: 1.7;
+
+.skill-item:hover {
+  border-color: rgb(204, 202, 202);
+  box-shadow: 0 5px 15px rgba(27, 42, 74, 0.08);
+  transform: translateY(-2px); 
 }
+
 .skill-item i {
   font-size: 1.8rem;
   color: var(--color-secondary);
@@ -307,16 +309,14 @@ main {
   font-family: var(--font-main);
   font-size: 1rem;
   color: var(--color-primary);
-  transition: 0.3s;
 }
-.skill-item:hover i,
-.skill-item:hover span {
+
+.skill-item:hover i {
   color: var(--color-secondary);
 }
-.skill-item:hover {
-  border: 1px solid gray;
-  box-shadow: 0 5px 15px rgba(27, 42, 74, 0.08);
-  transform: translateY(-2px);
+.skill-item:hover span {
+  color: var(--color-secondary);
+  font-weight: 500; 
 }
 .site-footer {
   background-color: var(--color-primary);
@@ -426,18 +426,18 @@ main {
 
 .project-card {
   position: relative;
-  border: 1px solid #b9bdbd;
+  border: 1px solid #ffffff;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex: 1;
-  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: flex 0.6s;
 }
 
 .project-card:hover {
-  border-color: var(--color-secondary);
+  border-color: rgb(210, 207, 207);
 }
 .project-card.active {
   flex: 4;
@@ -490,6 +490,10 @@ main {
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
+  transition: opacity 0.4s ease;
+}
+.project-link:hover {
+  opacity: 0.7;
 }
 .badges {
   display: flex;
@@ -503,6 +507,20 @@ main {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+  transition: all 0.3s ease; 
+}
+.badge:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  opacity: 0.9;
+}
+.badge.html:hover,
+.badge.css:hover,
+.badge.js:hover,
+.badge.python:hover,
+.badge.django:hover {
+  background-color: var(--color-secondary); 
+  color: white;
 }
 
 .badge.html {
