@@ -5,7 +5,7 @@ from .models import Main, Project, Skill
 def index(request):
     main_details = Main.objects.first()
     projects = Project.objects.all()
-    skills = skill.objects.all()
+    skills = Skill.objects.all()
     
     for proj in projects:
         if proj.tags:
