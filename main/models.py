@@ -21,7 +21,7 @@ class Main(models.Model):
     
 class Project(models.Model):
     
-    title = models.CharField("عنوان",max_length=150, blank=True)
+    title = models.CharField(max_length=150, blank=True, verbose_name="Project Title")
     featured_image = models.ImageField(upload_to="projects/")
     description = models.TextField(blank=True)
     view_projects_link = models.URLField(blank=True)
