@@ -53,3 +53,19 @@ class Skill(models.Model):
     
     def __str__(self):
         return self.name
+    
+    
+    
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name_plural = "Contact Message"
+        
+        
+    def __str__(self):
+        return self.name + "(" + self.email + ")"
+    
