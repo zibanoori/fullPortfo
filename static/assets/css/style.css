@@ -668,6 +668,13 @@ section::after {
   max-height: 300px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px; 
+}
+
 /* Tablet and smaller screens (max-width: 992px) */
 @media (max-width: 992px) {
   .container {
